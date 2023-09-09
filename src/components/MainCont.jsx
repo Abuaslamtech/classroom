@@ -18,7 +18,7 @@ const MainCont = ({ active }) => {
         {active === "chatroom" && <Chatroom />}
         {active === "community" && <Community />}
         {active === "news" && <News />}
-        {active === "nprofileews" && <Profile />}
+        {active === "profile" && <Profile />}
         {active === "mentorship" && <Mentorship />}
       </section>
     </>

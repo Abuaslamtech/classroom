@@ -11,9 +11,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 
-const Navbar = ({ setActive, nav, isVisible }) => {
+const Navbar = ({ setActive, nav, isVisible, hideMenu }) => {
   const [activeLink, setActiveLink] = useState("resources");
   const [result, setResult] = useState(true);
+  const [hideNav, setHideNav] = useState(false);
   const [width, setWidth] = useState(window.innerWidth);
 
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ const Navbar = ({ setActive, nav, isVisible }) => {
   const handleClick = (content, e) => {
     setActive(content);
     setActiveLink(content);
+    hideMenu()
   };
 
   // log out
@@ -62,7 +64,7 @@ const Navbar = ({ setActive, nav, isVisible }) => {
         <h2>CLASSROOM</h2>
       </div>
 
-      <nav className="">
+      <nav>
         <div
           className={`list ${activeLink === "resources" ? "active" : ""}`}
           onClick={(e) => handleClick("resources", e)}

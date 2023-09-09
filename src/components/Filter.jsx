@@ -12,11 +12,11 @@ const Filter = ({ closeFilter, onReceiveData }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setNewFilterTerms({ ...newFilterTerms, [name]:value });
+    setNewFilterTerms({ ...newFilterTerms, [name]: value });
   };
 
   const sendData = () => {
-    onReceiveData(newFilterTerms)
+    onReceiveData(newFilterTerms);
     closeFilter();
   };
 
@@ -24,7 +24,7 @@ const Filter = ({ closeFilter, onReceiveData }) => {
     <>
       <div className="filterSearch">
         <div className="filterCont">
-          Filter Files by
+          <h2>Filter Files by</h2>
           <div className="filterForm">
             <input
               type="text"

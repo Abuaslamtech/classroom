@@ -35,7 +35,7 @@ const hideMenu =()=>{
         <img src={menu} alt="" onClick={hideMenu} />
       </div>
       <section className="dashboard">
-        <Navbar setActive={setActive} isVisible={isVisible} width={width}/>
+        <Navbar setActive={setActive} hideMenu={hideMenu} isVisible={isVisible} width={width}/>
         <MainCont active={active} />
       </section>
     </>
