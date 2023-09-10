@@ -711,25 +711,36 @@ nav {
     width: 100%;
   }
   .docs {
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
   }
   .file {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     margin: auto;
+
+
   }
   .files {
-    width: 80%;
+    width: 90%;
+    height: 100%;
+  }
+  .mright{
+    width: 100%;
   }
   .right {
-    width: 40%;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--primary);
   }
   .mrdata1,
   .mrdata2,
@@ -738,7 +749,7 @@ nav {
   }
   .report,
   .file_download {
-    width: 80%;
+    width: 40%;
   }
   /* upload */
   .layer{
